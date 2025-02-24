@@ -6,14 +6,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-# Restrict TensorFlow memory growth
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-    try:
-        for gpu in gpus:
-            tf.config.experimental.set_memory_growth(gpu, True)
-    except RuntimeError as e:
-        print(e)
+
 # Load the TensorFlow SavedModel correctly
 MODEL_PATH = "models/my-model"  # Ensure correct model path
 model = tf.keras.layers.TFSMLayer(MODEL_PATH, call_endpoint="serving_default")
