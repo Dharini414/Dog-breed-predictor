@@ -1,7 +1,7 @@
-Flask
+flask
 tensorflow
 numpy
 pandas
 Pillow
 gunicorn
-gradio
+scipy
