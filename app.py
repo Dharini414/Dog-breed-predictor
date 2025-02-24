@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 # Load the TensorFlow SavedModel correctly
-MODEL_PATH = "models/my-model"  # Ensure correct model path
+MODEL_PATH = "25-Feb021739968558-1000-images-model.h5"  # Ensure correct model path
 model = tf.keras.layers.TFSMLayer(MODEL_PATH, call_endpoint="serving_default")
 
 UPLOAD_FOLDER = "static/uploads"
