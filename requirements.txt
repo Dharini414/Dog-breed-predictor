@@ -1,7 +1,8 @@
 flask
-tensorflow
 numpy
 pandas
 Pillow
 gunicorn
 scipy
+tensorflow-cpu
+werkzeug
